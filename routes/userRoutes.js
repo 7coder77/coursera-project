@@ -7,6 +7,7 @@ const SECRET_KEY = 'your_jwt_secret_key';
 let users = {};
 
 router.post('/register', (req, res) => {
+  console.log('Registering user:', req.body);
   const { username, password } = req.body;
   if (users[username]) return res.status(400).json({ error: 'User already exists' });
 

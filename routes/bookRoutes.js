@@ -1,11 +1,13 @@
-// routes/bookRoutes.js
 const express = require('express');
 const router = express.Router();
 const { authenticateToken } = require('../middleware/auth');
 
 let books = [
   { isbn: '1234', title: 'Node Basics', author: 'John Doe', reviews: {} },
-  { isbn: '5678', title: 'Express Guide', author: 'Jane Doe', reviews: {} },
+  { isbn: '235762', title: 'Master Angular', author: 'John Doe', reviews: {"John":"best book ever","Jane":"great book"} },
+  { isbn: '562178', title: 'Express Guide', author: 'Jane Doe', reviews: {} },
+  { isbn: '56217348', title: 'Js expert', author: 'Jane Doe', reviews: {} },
+
 ];
 
 // Public Routes
